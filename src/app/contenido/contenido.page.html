@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title class="ion-padding-top ion-text-center">
+      RegistraApp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div class="logo">
+    <img src="./assets/logo.png" alt="Logo Duoc">
+  </div>
+  <br>
+  <br>
+
+  <ion-list >
+    <ion-item *ngFor="let item of getData">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>
+        <h2>{{ item.name }}</h2>
+        <h2>{{ item.species }}</h2>
+        <h2>{{ item.location.name }} </h2>
+      </ion-label>
+    </ion-item>
+    
+  </ion-list>
+
+
+
+  <br>
+  <div class="boton">
+    <ion-button color="warning" [routerLink]="['/home']">Volver</ion-button>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="#000000">
+    <ion-img style="height: 50px" src="../../assets/logoDuoc.png"></ion-img>
+  </ion-toolbar>
+</ion-footer>
